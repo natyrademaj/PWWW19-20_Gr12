@@ -1,4 +1,4 @@
-p,h1,html,body,a,
+p,h1,html,body,a,div,figure,img
 
    body
    {
@@ -10,7 +10,12 @@ p,h1,html,body,a,
 	  background-color: white;
 	  display: inline;
 	  padding: 0;
+
   }
+
+  p label  {float: right; }
+
+
   nav ul p
   {
       background-color: white;
@@ -19,31 +24,40 @@ p,h1,html,body,a,
 	  background-size: 100px 100px 100px 100px;
   }
     ul li
-  {
+  {   float: right;
 	  list-style: none;
 	  display: inline;
 	  margin-left: 20px;
+
   }
+  ul li :hover {color: pink;}
   nav ul p1
   {
 	  font-size: 1em;
 	  font-style: oblique;
   }
+
   section h1
   {
 	 text-align: center;
      padding: 10px;
   }
-  section p
-  {
+
+  div
+  { float: center;
 	 text-align: center;
      padding: 0px;
+font-family: "Times New Roman", Times, serif;
   }
+
   section h3
   {
 	  text-align: center;
      padding: 10px;
   }
+  h3 button {background-color: pink;}
+
+
   hr
   {
 	  position: relative;
@@ -53,3 +67,17 @@ p,h1,html,body,a,
 	  background: gray;
 	  margin-bottom: 100px;
   }
+  figure  img   {
+               float: left;
+               width: 10%;
+               text-align: right;
+               font-style: italic;
+               font-size: smaller;
+               text-indent: 0;
+               border: thin silver solid;
+               margin: 0px;
+               padding: 5em;
+}
+figure h4 {text-align: left;
+         text-indent: 0;
+         }
