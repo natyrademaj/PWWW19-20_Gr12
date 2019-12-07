@@ -7,14 +7,26 @@ p,h1,html,body,a,div,figure,img
 
    p
   {
-	  background-color: white;
+	  background-color: black;
 	  display: inline;
 	  padding: 0;
 
   }
-
+  /* e kemi ndryshu kornizen e inputit search*/
+label input {
+              border-radius: 10px;
+                background: #353535;
+                padding: 10px;
+                width: 200px;
+                height: 10px;
+                text-decoration: none;
+                color: white;
+}
   p label  {float: right; }
 
+
+
+img :hover {color: orange;}
 
   nav ul p
   {
@@ -28,9 +40,21 @@ p,h1,html,body,a,div,figure,img
 	  list-style: none;
 	  display: inline;
 	  margin-left: 20px;
+	/* border-bottom: 1px solid #000*/
 
   }
-  ul li :hover {color: pink;}
+  ul li :hover {color: hotpink;
+  }
+
+
+
+ li a {text-decoration:none;
+      /* border-bottom: 1px solid #000*/
+
+}
+
+figcaption h4 { float: left;}
+
   nav ul p1
   {
 	  font-size: 1em;
@@ -42,6 +66,11 @@ p,h1,html,body,a,div,figure,img
 	 text-align: center;
      padding: 10px;
   }
+
+li a {color: black;}
+
+
+
 
   div
   { float: center;
@@ -55,10 +84,29 @@ font-family: "Times New Roman", Times, serif;
 	  text-align: center;
      padding: 10px;
   }
-  h3 button {background-color: pink;}
 
-
-  hr
+  /* borders te vieww full gallery*/
+#b a{
+  border-radius: 10px;
+  background: #D24260;
+  padding: 10px;
+  width: 300px;
+  height: 10px;
+  text-decoration: none;
+  color: white;
+}
+/* border search*/
+  #search {
+  border-radius: 10px;
+  background: #D24260;
+  padding: 10px;
+  width: 50px;
+  height: 10px;
+  text-decoration: none;
+  color: white;
+}
+/* vija pas view full gallery*/
+  hr #aa
   {
 	  position: relative;
 	  top: 10px;
@@ -67,7 +115,7 @@ font-family: "Times New Roman", Times, serif;
 	  background: gray;
 	  margin-bottom: 100px;
   }
-  figure  img   {
+ figure  img   {
                float: left;
                width: 10%;
                text-align: right;
@@ -77,7 +125,23 @@ font-family: "Times New Roman", Times, serif;
                border: thin silver solid;
                margin: 0px;
                padding: 5em;
+
+
 }
 figure h4 {text-align: left;
          text-indent: 0;
          }
+
+nav #1 {float: right;
+        right: 50px;
+}
+
+/* vija pas fotove pink*/
+section hr {  position: relative;
+    	  top: 250px;
+    	  border: none;
+    	  height: 8px;
+    	  margin-bottom: 50px;
+    	  background-color: #C54661;
+}
+
