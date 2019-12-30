@@ -9,20 +9,21 @@
 
    body
    {
-	   background-color: white;
-font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+width: 960px;
+height: 350px;
+margin: auto;
+background-image: url(Images/g34.jpg);
 
    }
-
    p
   {
-	 /* background-color: black; */
+
 	  display: inline;
 	  padding: 0;
-
   }
 /* icons orange from black*/
-  p i:hover { color: orange;
+  p i:hover { color: DarkViolet;
   }
 
   /* e kemi ndryshu kornizen e inputit search*/
@@ -42,7 +43,6 @@ label input  {
   nav ul p
   {
       background-color: white;
-	  font-size: 2em;
 	  font-style: italic;
 	  background-size: 100px 100px 100px 100px;
   }
@@ -55,19 +55,19 @@ label input  {
  }
 
 /* menyte(homepage...) me elementin hover,border per vijen*/
-  ul li :hover{color: hotpink;
+  ul li :hover{color: BlueViolet;
   border-bottom: 1px solid #000;
     padding-bottom: 8px;
-    border-color: hotpink;
+    border-color: DarkViolet;
   }
 
 /* heqja e underline te linkut*/
  li a {text-decoration:none;
-      /* border-bottom: 1px solid #000*/
+
 
 }
 /* icons pinterest,google... to black*/
-p a i {color: black;}
+p a i {color: gray;}
 
 
   nav ul p1
@@ -84,13 +84,6 @@ p a i {color: black;}
 /* menyte homepage....*/
 li a {color: black;
 }
- div
-  { float: center;
-	 text-align: center;
-     padding: 0px;
-font-family: "Times New Roman", Times, serif;
-  }
-
   section h3
   {
 	  text-align: center;
@@ -99,7 +92,7 @@ font-family: "Times New Roman", Times, serif;
 
    #search {
   border-radius: 10px;
-  background: #D24260;
+  background: DarkViolet;
   padding: 10px;
   width: 50px;
   height: 10px;
@@ -136,20 +129,22 @@ font-family: "Times New Roman", Times, serif;
     margin: 2.5em;
     width: 200px;
     font-size: 1.0em ;
-    background-color: PeachPuff;
-    border-color: LightSalmon;
+    background-color: Plum;
+    border-color: DarkViolet;
 
 }
+/*news and events*/
 h1 { text-align: left;
      margin: 1.5em;
 font-family: "Lucida Sans Unicode", "Lucida Grande",serif;
 font-size: 30px;
 letter-spacing: 0.8px;
 word-spacing: 2px;
-text-decoration: overline solid rgb(68, 68, 68);
+text-decoration: overline solid DarkViolet;
 font-style: normal;
 font-variant: small-caps;
 text-transform: capitalize;
+color: DarkViolet;
 }
 /* texti i tabeles */
 table {
@@ -157,52 +152,90 @@ table {
        text-align: left;
 }
 
-/* ndryshimi i shkrimit te linku i tabeles*/
-table a {font-variant: small-caps;
-         text-transform: capitalize;
+/* ndryshimi i shkrimit te linku i tabeles 1 */
+table a {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
           font-size: 22px;
           color: black;}
+
 /*ndryshimi i tekstit te linkut tek news Popular Articles*/
 #b  {font-size: 18px;}
 #b1  {font-size: 18px;}
 #b2  {font-size: 18px;}
 
 /* elementi hover te linku i tabeles*/
- table a:hover { color: hotpink; }
+ table a:hover { color: DarkViolet; }
 
 /* ndryshimi i madhesise se textit te paragrafit nen foto te tabeles*/
   tr { font-size: 15px;
-       font-family: "Times New Roman", Times, serif;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
  }
  /*dizajnimi i tekstit Popular Articles*/
 h2 {text-decoration: underline;
     margin: 2em;
-    color: hotpink;}
-/*heqja e nenvizimit te linkut te tel dhe email*/
-#tel {text-decoration: none; }
-#email {text-decoration: none; }
+    color: DarkViolet;}
 
+/*heqja e nenvizimit te linkut te tel, email dhe linkut*/
+#tel {text-decoration: none;
+ color: DarkViolet;}
+#email {text-decoration: none; color: DarkViolet;}
+#a1 {text-decoration: none;}
+
+/* ne fund te tabeles,butoni submit*/
+td #submit {
+  border-radius: 10px;
+  background: DarkViolet;
+  padding: 15px;
+  width: 80px;
+  height: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/*zgjedhja e fontit per Galaxy dhe Welcome title(Atronomy Facts)*/
+ul p
+{font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 55px;
+font-variant: small-caps;
+text-transform: capitalize;}
+
+td a { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 15px;}
+
+
+/* ngjyrosja e background-it ne te zeze ne tabelen e 2te*/
+#n {background-color: black;
+color: white;}
+footer {background-color: black;
+color: white}
+#a1 {color: DarkViolet;}
+
+/* ndryshimi i teresishem i faqes*/
+#black {background-color: black;
+padding: 2px;
+}
+#brenda { border-radius: 15px;
+background-color: white;
+}
 </style>
 </head>
-<body>
+<body><section id="black">
 <p>
 
-
-    <a href="www.facebook.com"><i class="fa fa-snapchat" style="font-size:24px"></i></a>
-    <a href="www.twitter.com"><i class="fa fa-twitter" style="font-size:24px"></i></a>
-    <a href="www.pinterest.com"><i class="fa fa-pinterest" style="font-size:24px"></i></a>
-    <a href="www.google.com"><i class="fa fa-google-plus-circle" style="font-size:24px;"></i></a>
-    <a href="www.google.com"><i class="fa fa-chrome" style="font-size:24px;"></i></a>
-
+    <a href="http://www.snapchat.com"><i class="fa fa-snapchat" style="font-size:24px"></i></a>
+    <a href="http://www.twitter.com"><i class="fa fa-twitter" style="font-size:24px"></i></a>
+    <a href="http://www.pinterest.com"><i class="fa fa-pinterest" style="font-size:24px"></i></a>
+    <a href="http://www.google.com"><i class="fa fa-google-plus-circle" style="font-size:24px;"></i></a>
+    <a href="http://www.chrome.com"><i class="fa fa-chrome" style="font-size:24px;"></i></a>
 
     <label>
         <input type="text" name="Search" placeholder="Search Our Website...">
         <a id="search" href="#">Search</a></LABEL>
 </p>
+<section id="brenda">
 <p>
     <nav>
         <ul>
-<p  id="1">ExploringGalaxy</p> <br>
+<p>Galaxy</p> <br>
 <p1>The magnificient of God's creation</p1>
 
 <li><a href="#">FUN FACTS</a></li>
@@ -210,7 +243,7 @@ h2 {text-decoration: underline;
 <li><a href="#">CONSTELLATIONS</a></li>
 <li><a href="#">SOLAR SYSTEM</a></li>
 <li><a href="Faqja1.html">NEWS</a></li>
-<li><a href="#">HOMEPAGE</a></li><hr align="right" width="50%">
+<li><a href="#">HOMEPAGE</a></li><hr align="right" width="70%">
 <br>
 </ul>
 </nav>
@@ -225,7 +258,7 @@ h2 {text-decoration: underline;
         <p>13 December 2019</p>
     </article><figure><img src="Images/g11.jpg" />
     <figcaption>
-        <a href="https://www.sciencenews.org/article/19-more-galaxies-mysteriously-missing-dark-matter-found">19 more galaxies mysteriously missing <br>dark matter have been found</a>
+        <a href="https://www.sciencenews.org/article/19-more-galaxies-mysteriously-missing-dark-matter-found">19 more galaxies mysteriously missing dark matter have been found</a>
     </figcaption></figure>
 <p >The finding reveals a population of dwarf galaxies <br>
     that defy common wisdom about how these star systems<br>
@@ -239,10 +272,10 @@ h2 {text-decoration: underline;
             <p>16 December 2019</p>
         </article><figure><img src="Images/g12.jpg" />
             <figcaption>
-                <a href="https://www.sciencenews.org/article/universe-expansion-rate-mystery">Scientists still can’t agree on the universe’s <br> expansion rate</a>
+                <a href="https://www.sciencenews.org/article/universe-expansion-rate-mystery">Scientists still can’t agree on the universe’s  expansion rate</a>
             </figcaption></figure>
-            <p>A mismatch in measurements of how fast the <br>
-                universe is expanding might not be real,<br>
+            <p>A mismatch in measurements of how fast the
+                universe is expanding might not be real,
                 a study hints..</p></th>
         <!--vendosja e news nen popular articles-->
         <td>
@@ -259,13 +292,13 @@ h2 {text-decoration: underline;
 <tr>
     <th><article class="date">
         <p>25 December 2019</p></article>
-        <figure><img src="Images/g14.jpg"  />
+        <figure><img src="Images/g14.jpg"/>
         <figcaption>
             <a href="https://www.sciencenews.org/article/50-years-ago-scientists-didnt-know-origin-heavy-elements">50 years ago, scientists didn’t know where<br> heavy elements came from</a>
         </figcaption></figure>
         <p>Five decades ago, scientists suspected ordinary<br>
             supernovas created heavy elements. Now we know <br>
-            they don’t, but merging neutron stars do..</p></th>
+            they don’t, but stars do..</p></th>
 
     <td>
     <th>
@@ -296,44 +329,60 @@ h2 {text-decoration: underline;
             </figcaption></figure>
     </th>
     </td>
-
 </tr>
     </thead>
 </table>
-
-
 <hr>
-<section>
-    <table id="2" border="0">
+<section id="n">
+    <table border="0">
         <thead>
         <tr>
             <th>CONTACT DETAILS</th>
-        <br>
+            <th>QUICK LINKS</th>
+            <th>OUR MISSION</th>
+            <th>GRAB OUR NEWSLETTERS</th>
         </tr> </thead>
 
         <tbody>
         <tr>
             <td><br>
                 <p>For more infomation <br>
-                    wether suggesions or compaints, <br>
+                    wether suggesions or<br>
+                    compaints,
                     contact us at:<br>
 
                     <em>Phone:</em> <a href="tel:+14258828080" id="tel">+1 (425) 882-8080</a><br/>
-                    <em>Email:</em> <a href="mailto:Fqja1@gmail.com" id="email">Faqja1@gmail.com</a>
+                    <em>Email:</em> <a href="mailto:Faqja2@gmail.com" id="email">Faqja2@gmail.com</a>
                 </p>
             </td>
 
+            <td><a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
+                <br> <a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=j8bvk2567atnc38nhsgtjuu4dc" id="a1">Faqja2</a><hr align="left" width="70%">
+                <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
+                <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
 
+            </td>
 
+            <td>Our mission is to provide<br>
+                life-long professional services<br>
+                to support all people
+                who<br> want to know more about <br>
+                our planet and space.
+                </br></td>
+            <td>
+                <label><input ype="text" name="name" placeholder="Name" /></label> <br>
+                <label><input type="text" name="Email" placeholder="Email"/> </label> <br>
+                <input id ="submit" type="SUBMIT" name="SUBMIT"/>
+            </td>
         </tr>
         </tbody>
     </table>
-</section>
+
 
 <hr>
-<p> Copyright &copy 2019 - All Rights Reserved  </p>
-
-
+<footer> Copyright &copy 2019 - All Rights Reserved  </footer>
+</section></section>
+</section>
 
 
 </body>
