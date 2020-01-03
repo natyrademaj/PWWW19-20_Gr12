@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="Faqja2.appcache">
 <head>
     <meta charset="UTF-8">
     <title>News</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/html" href="PWWW19-20_Gr12.html"/>
+<!-- drag and drop -->
+    <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
     <style>
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+
 
    body
    {
@@ -18,7 +44,6 @@ background-image: url(Images/g34.jpg);
    }
    p
   {
-
 	  display: inline;
 	  padding: 0;
   }
@@ -90,7 +115,7 @@ li a {color: black;
      padding: 10px;
   }
 
-   #search {
+  #search {
   border-radius: 10px;
   background: DarkViolet;
   padding: 10px;
@@ -134,7 +159,7 @@ li a {color: black;
 
 }
 /*news and events*/
-h1 { text-align: left;
+h1 { text-align: right;
      margin: 1.5em;
 font-family: "Lucida Sans Unicode", "Lucida Grande",serif;
 font-size: 30px;
@@ -146,6 +171,7 @@ font-variant: small-caps;
 text-transform: capitalize;
 color: DarkViolet;
 }
+
 /* texti i tabeles */
 table {
        width: 100%;
@@ -216,6 +242,43 @@ padding: 2px;
 #brenda { border-radius: 15px;
 background-color: white;
 }
+hr#v2 {position: relative;
+    	  border: none;
+    	  height: 8px;
+    	  margin-bottom: 50px;
+    	  background: DarkViolet;
+    	  margin-top: 30px;
+    	  margin-bottom: 0px;
+}
+/*drag and drop madhesia e fotos*/
+#drag1 {width: 346px;
+         height: 69px;}
+
+/* per foton canvas */
+#g {width: 150px;
+         height: 150px;}
+
+/* butoni getLocation*/
+ #getLocation {
+  border-radius: 10px;
+  background: DarkViolet;
+  padding: 10px;
+  width: 150px;
+  height: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+/*butoni click me canvas*/
+#click {
+  border-radius: 10px;
+  background: DarkViolet;
+  padding: 4px;
+  width: 60px;
+  height: 20px;
+  text-decoration: none;
+  color: white;
+}
 </style>
 </head>
 <body><section id="black">
@@ -242,27 +305,28 @@ background-color: white;
 <li><a href="#">STARS</a></li>
 <li><a href="#">CONSTELLATIONS</a></li>
 <li><a href="#">SOLAR SYSTEM</a></li>
-<li><a href="Faqja1.html">NEWS</a></li>
-<li><a href="#">HOMEPAGE</a></li><hr align="right" width="70%">
+<li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=g3b3sr0miqilrs8svqmneh2crn">NEWS</a></li>
+<li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=iu6e8v0hgor425pgouanag95nh">HOMEPAGE</a></li><hr align="right" width="70%">
 <br>
 </ul>
 </nav>
 </p>
-
 <h1>News &amp Events</h1>
+
 <table id="1">
     <thead>
 <tr>
 
     <th> <article class="date">
         <p>13 December 2019</p>
-    </article><figure><img src="Images/g11.jpg" />
+    </article><figure><video controls style="width: 300px; height: 200px;" >
+
+        <source src="AudioVideo/video1.mp4" type="video/mp4">
+    </video>
+
     <figcaption>
-        <a href="https://www.sciencenews.org/article/19-more-galaxies-mysteriously-missing-dark-matter-found">19 more galaxies mysteriously missing dark matter have been found</a>
+        <a href="https://www.youtube.com/watch?v=_T8cn2J13-4&feature=youtu.be">Watch: How are we going to the moon?</a>
     </figcaption></figure>
-<p >The finding reveals a population of dwarf galaxies <br>
-    that defy common wisdom about how these star systems<br>
-    form and evolve.
 <br>
 
 </tr>
@@ -270,17 +334,22 @@ background-color: white;
     <tr>
         <th> <article class="date">
             <p>16 December 2019</p>
-        </article><figure><img src="Images/g12.jpg" />
+        </article><figure>
+
+            <video controls style="width: 300px; height: 250px;">
+            <source src="AudioVideo/video2.mp4" type="video/mp4">
+        </video>
+
             <figcaption>
-                <a href="https://www.sciencenews.org/article/universe-expansion-rate-mystery">Scientists still can’t agree on the universe’s  expansion rate</a>
+                <a href="https://www.youtube.com/watch?time_continue=122&v=zukBXehGHas&feature=emb_title">Watch: NASA’s NICER Reveals 1st-ever Pulsar Surface Map</a>
             </figcaption></figure>
-            <p>A mismatch in measurements of how fast the
-                universe is expanding might not be real,
-                a study hints..</p></th>
+            </th>
         <!--vendosja e news nen popular articles-->
         <td>
         <th><h2>Popular Articles</h2>
-            <figure><img src="Images/g16.jpg" id="a" />
+            <figure>    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                <img id="drag1" src="Images/g16.jpg" draggable="true" ondragstart="drag(event)"/>
                 <figcaption>
                     <a href="https://www.space.com/first-black-hole-photo-science-breakthrough-2019.html" id="b">Historic 1st Photo of a Black Hole<br> Named Science Breakthrough of 2019</a>
                 </figcaption></figure>
@@ -323,20 +392,79 @@ background-color: white;
 
     <td>
     <th>
-        <figure><img src="Images/g18.jpg" id="a2"/>
+    <!-- perdorimi i canvas edhe getElementById-->
+        <figure>
+            <img id="g" src="Images/g18.jpg" width="150" height="150"/>
+
+            <canvas id="myCanvas" width="150" height="150"  style="border: 1px solid #d3d3d3;"></canvas>
+
+            <p><button id="click" onclick="myCanvas()">Click</button></p>
             <figcaption>
                 <a href="https://www.space.com/milky-way-ancient-starburst-discovery-image-video.html" id="b2">Scientists Spot Ancient Star Burst in Milky Way's<br> Heart in Stunning New Image</a>
-            </figcaption></figure>
+            </figcaption>
+            <script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("g");
+  ctx.drawImage(img,10,10);
+}
+</script>
+
+            </figure>
     </th>
     </td>
 </tr>
     </thead>
 </table>
-<hr>
+
+
+
+    <h2>GalaxySounds</h2>
+       <!-- audio-->
+    <br>
+
+    <figure><figcaption style="color: DarkViolet;">Its a universe full of secrets</figcaption>
+    <audio controls>
+        <source src="AudioVideo/audio2.mp3" type="audio/mpeg">
+    </audio></figure>
+    <br>
+<figure><figcaption style="color: DarkViolet;">One million Earths could fit inside the sun</figcaption>
+    <audio controls>
+        <source src="AudioVideo/audio1.mp3" type="audio/mpeg">
+    </audio></figure>
+
+
+    <!-- perdorimi i geolocation permes butonit-->
+
+<Br>
+    <button id="getLocation" onclick="getLocation()" style="float: right;">PozitaGjeografike</button>
+    <p id="demo"></p>
+
+    <script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+
+    <hr id="v2">
+
 <section id="n">
     <table border="0">
         <thead>
-        <tr>
+        <tr> <br>
             <th>CONTACT DETAILS</th>
             <th>QUICK LINKS</th>
             <th>OUR MISSION</th>
@@ -356,7 +484,7 @@ background-color: white;
                 </p>
             </td>
 
-            <td><a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
+            <td><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=c8ijbj5f8hv64go18vofbilpg7" id="a1">Project</a><hr align="left" width="70%">
                 <br> <a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=j8bvk2567atnc38nhsgtjuu4dc" id="a1">Faqja2</a><hr align="left" width="70%">
                 <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
                 <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
@@ -384,6 +512,31 @@ background-color: white;
 </section></section>
 </section>
 
+<!-- perdorimi i kushtit 27 per bakcground me ndryshim te kohes-->
+<script>
+function updateBackground() {
+  var hr = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style,
+    hello = document.querySelector(".brenda");
+  if (hr < 10) {
+    bstyle.backgroundColor = "yellow";
+    bstyle.color = "black";
+
+  } else if (hr < 20) {
+    bstyle.backgroundColor = "green";
+   /* bstyle.color = "white"; */
+
+  } else {
+    bstyle.backgroundColor = "black";
+    bstyle.color = "black";
+  }
+}
+
+setInterval(updateBackground, 1000 * 60);
+updateBackground();
+
+</script>
 
 </body>
 </html>
