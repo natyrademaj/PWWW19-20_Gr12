@@ -25,13 +25,11 @@ function drop(ev) {
     <style>
 
 #div1 {
-  width: 350px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
   padding: 10px;
   border: 1px solid #aaaaaa;
 }
-
-
 
    body
    {
@@ -52,7 +50,7 @@ background-image: url(Images/g34.jpg);
   }
 
   /* e kemi ndryshu kornizen e inputit search*/
-label input  {
+input  {
                border-radius: 10px;
                 background: #353535;
                 padding: 10px;
@@ -60,9 +58,8 @@ label input  {
                 height: 10px;
                 text-decoration: none;
                 color: white;
+                float: right;
 }
-/* vendosja e label ne anen e djathte te dritares*/
-  p label  {float: right; }
 
 
   nav ul p
@@ -115,24 +112,24 @@ li a {color: black;
      padding: 10px;
   }
 
-  #search {
+  #s1 {
   border-radius: 10px;
   background: DarkViolet;
   padding: 10px;
-  width: 50px;
-  height: 10px;
+  width: 70px;
+  height: 35px;
   text-decoration: none;
   color: white;
 }
+
+}
 /*dizajnimi i lajmit te pare nen News&Events */
 
-   tr th img{
+   tr th img {
                float: left;
                width: 300px;
                height: 250px;
-               text-align: right;
                font-size: smaller;
-               text-indent: 0;
                margin: 0px;
                padding: 0.5em;
 }
@@ -147,7 +144,7 @@ li a {color: black;
 
 
 /*box data para cdo news*/
-.date {box-shadow: 25px 25px 50px LightSalmon;
+.date {box-shadow: 25px 25px 50px DarkViolet;
     background:  border-box no-repeat;
     border: solid;
     border-radius: 0em;
@@ -156,8 +153,8 @@ li a {color: black;
     font-size: 1.0em ;
     background-color: Plum;
     border-color: DarkViolet;
-
 }
+
 /*news and events*/
 h1 { text-align: right;
      margin: 1.5em;
@@ -225,7 +222,8 @@ font-variant: small-caps;
 text-transform: capitalize;}
 
 td a { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-font-size: 15px;}
+font-size: 15px;
+}
 
 
 /* ngjyrosja e background-it ne te zeze ne tabelen e 2te*/
@@ -246,10 +244,11 @@ hr#v2 {position: relative;
     	  border: none;
     	  height: 8px;
     	  margin-bottom: 50px;
-    	  background: DarkViolet;
     	  margin-top: 30px;
     	  margin-bottom: 0px;
+    	  background: -webkit-linear-gradient(left,Violet,blue);
 }
+
 /*drag and drop madhesia e fotos*/
 #drag1 {width: 346px;
          height: 69px;}
@@ -279,6 +278,9 @@ hr#v2 {position: relative;
   text-decoration: none;
   color: white;
 }
+
+#drag1 { width: 150px;
+         height: 150px; }
 </style>
 </head>
 <body><section id="black">
@@ -290,9 +292,18 @@ hr#v2 {position: relative;
     <a href="http://www.google.com"><i class="fa fa-google-plus-circle" style="font-size:24px;"></i></a>
     <a href="http://www.chrome.com"><i class="fa fa-chrome" style="font-size:24px;"></i></a>
 
-    <label>
-        <input type="text" name="Search" placeholder="Search Our Website...">
-        <a id="search" href="#">Search</a></LABEL>
+/*  butoni search*/
+    <input type="button" value="Search"  id="s1">
+        <input type="text" name="Search" placeholder="Search Our Website..." id="s">
+
+
+    <script>
+        document.getElementById('s1').onclick = function() {
+        location.href=document.getElementById("s").value;
+        };
+    </script>
+
+
 </p>
 <section id="brenda">
 <p>
@@ -349,7 +360,7 @@ hr#v2 {position: relative;
         <th><h2>Popular Articles</h2>
             <figure>    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-                <img id="drag1" src="Images/g16.jpg" draggable="true" ondragstart="drag(event)"/>
+                <img id="drag1" src="Images/g16.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150"/>
                 <figcaption>
                     <a href="https://www.space.com/first-black-hole-photo-science-breakthrough-2019.html" id="b">Historic 1st Photo of a Black Hole<br> Named Science Breakthrough of 2019</a>
                 </figcaption></figure>
@@ -361,13 +372,11 @@ hr#v2 {position: relative;
 <tr>
     <th><article class="date">
         <p>25 December 2019</p></article>
-        <figure><img src="Images/g14.jpg"/>
-        <figcaption>
-            <a href="https://www.sciencenews.org/article/50-years-ago-scientists-didnt-know-origin-heavy-elements">50 years ago, scientists didn’t know where<br> heavy elements came from</a>
-        </figcaption></figure>
-        <p>Five decades ago, scientists suspected ordinary<br>
-            supernovas created heavy elements. Now we know <br>
-            they don’t, but stars do..</p></th>
+        <figure><img src="Images/g14.jpg" width="300px" height="300px"/>
+
+     <a href="https://www.sciencenews.org/article/50-years-ago-scientists-didnt-know-origin-heavy-elements"><br>
+            50 years ago, scientists didn’t know where heavy elements came from</a> </figure>
+        </th>
 
     <td>
     <th>
@@ -383,12 +392,11 @@ hr#v2 {position: relative;
 <tr>
     <th><article class="date">
         <p>30 December 2019</p></article>
-        <figure><img src="Images/g13.jpg" />
-        <figcaption>
-            <a href="https://www.sciencenews.org/article/a-new-mission-to-investigate-exoplanets-has-rocketed-into-space">A new mission to investigate exoplanets has<br> rocketed into space</a>
-        </figcaption></figure>
-        <p>The CHEOPS satellite will gather data on previously<br>
-            discovered planets outside the solar system.</p></th>
+        <figure><img src="Images/g13.jpg" width="300px" height="300px" />
+
+            <a href="https://www.sciencenews.org/article/a-new-mission-to-investigate-exoplanets-has-rocketed-into-space"><br>
+                A new mission to investigate<br> exoplanets has rocketed into space</a></figure>
+</th>
 
     <td>
     <th>
@@ -400,7 +408,7 @@ hr#v2 {position: relative;
 
             <p><button id="click" onclick="myCanvas()">Click</button></p>
             <figcaption>
-                <a href="https://www.space.com/milky-way-ancient-starburst-discovery-image-video.html" id="b2">Scientists Spot Ancient Star Burst in Milky Way's<br> Heart in Stunning New Image</a>
+                <a href="https://www.space.com/milky-way-ancient-starburst-discovery-image-video.html" id="b2">Scientists Spot Ancient Star Burst in Milky Way's Heart in Stunning New Image</a>
             </figcaption>
             <script>
 function myCanvas() {
