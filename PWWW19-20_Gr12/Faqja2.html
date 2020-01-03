@@ -43,7 +43,7 @@ background-image: url(Images/g34.jpg);
    p
   {
 	  display: inline;
-	  padding: 0;
+
   }
 /* icons orange from black*/
   p i:hover { color: DarkViolet;
@@ -51,7 +51,7 @@ background-image: url(Images/g34.jpg);
 
   /* e kemi ndryshu kornizen e inputit search*/
 input  {
-               border-radius: 10px;
+              border-radius: 10px;
                 background: #353535;
                 padding: 10px;
                 width: 200px;
@@ -59,6 +59,16 @@ input  {
                 text-decoration: none;
                 color: white;
                 float: right;
+}
+#search {
+ border-radius: 10px;
+  background: DarkViolet;
+  padding: 10px;
+  width: 70px;
+  height: 35px;
+  text-decoration: none;
+  color: white;
+  float: right;
 }
 
 
@@ -90,7 +100,8 @@ input  {
 }
 /* icons pinterest,google... to black*/
 p a i {color: gray;}
-
+i {color: gray;}
+i:hover {color: DarkViolet;}
 
   nav ul p1
   {
@@ -112,17 +123,8 @@ li a {color: black;
      padding: 10px;
   }
 
-  #s1 {
-  border-radius: 10px;
-  background: DarkViolet;
-  padding: 10px;
-  width: 70px;
-  height: 35px;
-  text-decoration: none;
-  color: white;
-}
 
-}
+
 /*dizajnimi i lajmit te pare nen News&Events */
 
    tr th img {
@@ -286,25 +288,42 @@ hr#v2 {position: relative;
 <body><section id="black">
 <p>
 
+    <script type="text/javascript">
+function d(g) {
+window.open('https://www.google.com/#q='+g1 +"site:google.com",  'G1window');
+}
+      </script>
+    <form onsubmit="d(this.g.value); return false;">
+        <input type="submit" value="Search"  id="search"/>
+        <input type="text" name="g" size="20" placeholder="Search Our Website..." />
+    </form>
+
+
+
     <a href="http://www.snapchat.com"><i class="fa fa-snapchat" style="font-size:24px"></i></a>
     <a href="http://www.twitter.com"><i class="fa fa-twitter" style="font-size:24px"></i></a>
     <a href="http://www.pinterest.com"><i class="fa fa-pinterest" style="font-size:24px"></i></a>
     <a href="http://www.google.com"><i class="fa fa-google-plus-circle" style="font-size:24px;"></i></a>
     <a href="http://www.chrome.com"><i class="fa fa-chrome" style="font-size:24px;"></i></a>
 
-/*  butoni search*/
+<!--  butoni search
+    <form class="navbar-form" role="search">
+
     <input type="button" value="Search"  id="s1">
         <input type="text" name="Search" placeholder="Search Our Website..." id="s">
-
+ </form>
 
     <script>
         document.getElementById('s1').onclick = function() {
         location.href=document.getElementById("s").value;
         };
     </script>
+-->
 
 
-</p>
+
+    </p>
+
 <section id="brenda">
 <p>
     <nav>
