@@ -3,7 +3,7 @@ p,h1,html,body,a,div,figure,img
    body
    {
 font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-
+/*background-image: url(Images/g34.jpg);*/
    }
 
    p
@@ -18,21 +18,22 @@ font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   }
 
   /* e kemi ndryshu kornizen e inputit search*/
-label input  {
-               border-radius: 10px;
+input  {
+              border-radius: 10px;
                 background: #353535;
                 padding: 10px;
                 width: 200px;
                 height: 10px;
                 text-decoration: none;
                 color: white;
+                float: right;
 }
   p label  {float: right; }
 
 
   nav ul p
   {
-      background-color: white;
+
 	  font-size: 2em;
 	  font-style: italic;
 	  background-size: 100px 100px 100px 100px;
@@ -77,8 +78,7 @@ figcaption h4 { float: left;}
      text-transform: capitalize;
   }
 /* menyte homepage.... black*/
-li a {color: black;
-}
+li a {color: black;}
 
   div
   { float: center;
@@ -102,16 +102,7 @@ li a {color: black;
   text-decoration: none;
   color: white;
 }
-/* border search*/
-  #search {
-  border-radius: 10px;
-  background: DarkViolet;
-  padding: 10px;
-  width: 50px;
-  height: 10px;
-  text-decoration: none;
-  color: white;
-}
+
 /* vija pas view full gallery*/
    #v1
   {
@@ -120,7 +111,7 @@ li a {color: black;
 	  border: none;
 	  height: 0.5px;
 	  background: gray;
-	  margin-bottom: 100px;
+	  margin-bottom: 30px;
   }
   /* vendosja e kornizave te fotove */
  figure  img   {
@@ -142,13 +133,14 @@ figure h4 {text-align: left;
 
 
 /* vija pas fotove pink*/
-hr #v2 {
+hr#v2 {
           position: relative;
-    	  top: 250px;
     	  border: none;
     	  height: 8px;
     	  margin-bottom: 50px;
     	  background: DarkViolet;
+    	  margin-top: 30px;
+    	  margin-bottom: 0px;
 
 }
 
@@ -164,12 +156,13 @@ th {
 
 td #submit {
   border-radius: 10px;
-  background: #D24260;
+  background: DarkViolet;
   padding: 15px;
   width: 80px;
   height: 10px;
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 
 td a {text-decoration: none;}
@@ -187,7 +180,7 @@ table figure img {
 p a i {color: gray;}
 /* heqja e nenvizimit te linkut tek temat(list of  meteors...)*/
  a {text-decoration: none;
- color: black;
+    color: black;
     }
     a:hover {color: DarkViolet;}
 
@@ -280,4 +273,16 @@ padding: 2px;
 }
 #brenda { border-radius: 15px;
 background-color: white;
+}
+body { background-image: url(Images/g34.jpg);}
+
+#search {
+ border-radius: 10px;
+  background: DarkViolet;
+  padding: 10px;
+  width: 70px;
+  height: 35px;
+  text-decoration: none;
+  color: white;
+  float: right;
 }
