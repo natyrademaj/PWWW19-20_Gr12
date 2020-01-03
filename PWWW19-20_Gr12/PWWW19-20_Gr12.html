@@ -12,6 +12,19 @@
 </head>
 
 <body>
+
+<script type="text/javascript">
+function d(g) {
+window.open('https://www.google.com/#q='+g +"site:google.com",  'G1window');
+}
+      </script>
+<form onsubmit="d(this.g.value); return false;">
+    <input type="submit" value="Search"  id="search"/>
+    <input type="text" name="g" size="20" placeholder="Search Our Website..." />
+</form>
+
+
+
 <section id="black">
 <p>
     <a href="http://www.snapchat.com"><i class="fa fa-snapchat" style="font-size:24px"></i></a>
@@ -20,10 +33,7 @@
     <a href="http://www.google.com"><i class="fa fa-google-plus-circle" style="font-size:24px;"></i></a>
     <a href="http://www.chrome.com"><i class="fa fa-chrome" style="font-size:24px;"></i></a>
 
-    <label>
-        <input type="text" name="Search" placeholder="Search Our Website...">
-         <a id="search" href="#">Search</a>
-    </LABEL>
+
 </p>
     <section id="brenda">
 <p>
@@ -37,7 +47,7 @@
 <li><a href="#">CONSTELLATIONS</a></li>
 <li><a href="#">SOLAR SYSTEM</a></li>
 <li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=g3b3sr0miqilrs8svqmneh2crn">NEWS</a></li>
-<li><a href="#">HOMEPAGE</a></li><hr align="right" width="70%">
+<li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=iu6e8v0hgor425pgouanag95nh" target="_blank">HOMEPAGE</a></li><hr align="right" width="70%">
 <br>
         </ul>
      </nav>
@@ -186,13 +196,12 @@ $(window).load(function() {
     </table>
 </Section>
 
-
-    <hr class="v2">
+    <hr id="v2" >
 
 <section id="n">
     <table border="0">
         <thead>
-        <tr>
+        <tr> <br>
             <th>CONTACT DETAILS</th>
             <th>QUICK LINKS</th>
             <th>OUR MISSION</th>
@@ -207,26 +216,25 @@ $(window).load(function() {
                     contact us at:<br>
 
                     <em>Phone:</em> <a href="tel:+14258828080" id="a1">+1 (425) 882-8080</a><br/>
-                    <em>Email:</em> <a href="mailto:Faqja2@gmail.com" id="a1">Faqja2@gmail.com</a>
+                    <em>Email:</em> <a href="mailto:Projekti@gmail.com" id="a1">Faqja2@gmail.com</a>
                 </p></td>
 
-            <td><a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
+            <td><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=c8ijbj5f8hv64go18vofbilpg7" id="a1">Project</a><hr align="left" width="70%">
                 <br> <a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=j8bvk2567atnc38nhsgtjuu4dc" id="a1">Faqja2</a><hr align="left" width="70%">
                 <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
                 <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
-
             </td>
 
             <td>Our mission is to provide<br>
                 life-long professional services<br>
                 to support all people
                 who<br> want to know more about <br>
-                our planet and space
-                </br>.</td>
+                our planet and space.
+                </br></td>
             <td>
                 <label><input ype="text" name="name" placeholder="Name" /></label> <br>
                 <label><input type="text" name="Email" placeholder="Email"/> </label> <br>
-                <input id ="submit" type="SUBMIT" name="SUBMIT"/>
+                <form action="">      <input id ="submit" type="SUBMIT" name="SUBMIT"/> </form>
             </td>
         </tr>
         </tbody>
