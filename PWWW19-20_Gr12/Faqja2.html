@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" manifest="Faqja2.appcache">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>News</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/html" href="PWWW19-20_Gr12.html"/>
-<!-- drag and drop -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-3.3.1.min.js"> </script>
+
+    <script>
+$(document).ready(function(){
+  $("#space").click(function(){
+    $("#pp").fadeToggle("slow");
+    $("#pp").hide("slow", function(){
+    alert("The paragraph is now hidden");
+  });
+  });
+});
+</script>
+    <!-- drag and drop -->
     <script>
 function allowDrop(ev) {
   ev.preventDefault();
@@ -21,8 +34,28 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 </script>
-
     <style>
+
+/*dizajnimi i news&Events*/
+#slide1, #slide {
+  padding: 5px;
+  text-align: center;
+  background-color: Thistle;
+  border: solid 1px #c3c3c3;
+}
+#slide1 {
+  padding: 50px;
+  display: none;
+  font-family: Georgia, serif;
+font-size: 20px;
+color: DarkViolet;
+font-weight: normal;
+text-decoration: none;
+font-style: italic;
+font-variant: normal;
+text-transform: none;
+}
+
 
 #div1 {
   width: 150px;
@@ -60,6 +93,42 @@ input  {
                 color: white;
                 float: right;
 }
+
+#f {            border-radius: 10px;
+                background: #353535;
+                padding: 10px;
+                width: 200px;
+                height: 10px;
+                text-decoration: none;
+                color: white;
+                float: left;
+}
+
+#ss {
+   border-radius: 10px;
+  background: DarkViolet;
+  padding: 10px;
+  width: 70px;
+  height: 35px;
+  text-decoration: none;
+  color: white;
+  float: left;
+
+}
+
+#space { border-radius: 10px;
+  background: DarkViolet;
+  padding: 10px;
+  width: 100px;
+  height: 35px;
+  text-decoration: none;
+  color: white;
+  margin: 40px;
+  }
+
+
+#p2 { float: left; }
+
 #search {
  border-radius: 10px;
   background: DarkViolet;
@@ -170,6 +239,7 @@ font-variant: small-caps;
 text-transform: capitalize;
 color: DarkViolet;
 }
+
 
 /* texti i tabeles */
 table {
@@ -283,12 +353,62 @@ hr#v2 {position: relative;
 
 #drag1 { width: 150px;
          height: 150px; }
+
+ #pp { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 18px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: 500;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+text-align: center;
+ }
+
+ #butoni{
+         background-image: url("Images/g34.jpg");
+         height:150px;
+         width:400px;
+         border-color: DarkViolet;
+         font-size:20px;
+         margin:5% 30%;
+         cursor:pointer;
+         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+         color: White;
+         outline: 10px solid DarkViolet;
+         outline-offset: 5px;
+         resize: horizontal;
+     }
+
+      #center{
+                  /* position: relative;*/
+                   top: 30%;
+                   left: 30%;
+                   transform: translate(-35%, -200%);
+                   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+                   font-size:20px;
+                   text-shadow:-1px 0px 0px #000111;
+                   text-align: center;
+                   }
+
+                  #imazhi {opacity:1;}
+                  #imazhi:hover{
+                      opacity:0.8;
+                  }
+
+                  .librat{
+         column-count: 3;
+         column-gap: 40px;
+     }
+
 </style>
 </head>
 <body><section id="black">
-<p>
+    <p>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
 function d(g) {
 window.open('https://www.google.com/#q='+g1 +"site:google.com",  'G1window');
 }
@@ -299,137 +419,151 @@ window.open('https://www.google.com/#q='+g1 +"site:google.com",  'G1window');
     </form>
 
 
-
     <a href="http://www.snapchat.com"><i class="fa fa-snapchat" style="font-size:24px"></i></a>
     <a href="http://www.twitter.com"><i class="fa fa-twitter" style="font-size:24px"></i></a>
     <a href="http://www.pinterest.com"><i class="fa fa-pinterest" style="font-size:24px"></i></a>
     <a href="http://www.google.com"><i class="fa fa-google-plus-circle" style="font-size:24px;"></i></a>
     <a href="http://www.chrome.com"><i class="fa fa-chrome" style="font-size:24px;"></i></a>
 
-<!--  butoni search
-    <form class="navbar-form" role="search">
+    <!--  butoni search
+        <form class="navbar-form" role="search">
 
-    <input type="button" value="Search"  id="s1">
-        <input type="text" name="Search" placeholder="Search Our Website..." id="s">
- </form>
+        <input type="button" value="Search"  id="s1">
+            <input type="text" name="Search" placeholder="Search Our Website..." id="s">
+     </form>
 
-    <script>
-        document.getElementById('s1').onclick = function() {
-        location.href=document.getElementById("s").value;
-        };
-    </script>
--->
+        <script>
+            document.getElementById('s1').onclick = function() {
+            location.href=document.getElementById("s").value;
+            };
+        </script>
+    -->
 
 
 
     </p>
 
-<section id="brenda">
-<p>
-    <nav>
-        <ul>
-<p>Galaxy</p> <br>
-<p1>The magnificient of God's creation</p1>
+    <section id="brenda">
+        <p>
+            <nav>
+                <ul>
+        <p>Galaxy</p> <br>
+        <p1>The magnificient of God's creation</p1>
 
-<li><a href="#">FUN FACTS</a></li>
-<li><a href="#">STARS</a></li>
-<li><a href="#">CONSTELLATIONS</a></li>
-<li><a href="#">SOLAR SYSTEM</a></li>
-<li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=g3b3sr0miqilrs8svqmneh2crn">NEWS</a></li>
-<li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=iu6e8v0hgor425pgouanag95nh">HOMEPAGE</a></li><hr align="right" width="70%">
-<br>
-</ul>
-</nav>
-</p>
-<h1>News &amp Events</h1>
+        <li><a href="#">FUN FACTS</a></li>
+        <li><a href="#">STARS</a></li>
+        <li><a href="#">CONSTELLATIONS</a></li>
+        <li><a href="#">SOLAR SYSTEM</a></li>
+        <li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=g3b3sr0miqilrs8svqmneh2crn">NEWS</a></li>
+        <li><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=iu6e8v0hgor425pgouanag95nh">HOMEPAGE</a></li><hr align="right" width="70%">
+        <br>
+        </ul>
+        </nav>
+        </p>
+        <h1 id="slide">News &amp Events</h1>
+        <h1 id="slide1"><em>Space is amazing. The sheer vastness of it, along with
+            the trillions upon trillions of objects in the many
+            billion galaxies of the universe is almost
+            incomprehensible to the human brain.</em></h1>
 
-<table id="1">
-    <thead>
-<tr>
-
-    <th> <article class="date">
-        <p>13 December 2019</p>
-    </article><figure><video controls style="width: 300px; height: 200px;" >
-
-        <source src="AudioVideo/video1.mp4" type="video/mp4">
-    </video>
-
-    <figcaption>
-        <a href="https://www.youtube.com/watch?v=_T8cn2J13-4&feature=youtu.be">Watch: How are we going to the moon?</a>
-    </figcaption></figure>
-<br>
-
-</tr>
-
-    <tr>
-        <th> <article class="date">
-            <p>16 December 2019</p>
-        </article><figure>
-
-            <video controls style="width: 300px; height: 250px;">
-            <source src="AudioVideo/video2.mp4" type="video/mp4">
-        </video>
-
-            <figcaption>
-                <a href="https://www.youtube.com/watch?time_continue=122&v=zukBXehGHas&feature=emb_title">Watch: NASA’s NICER Reveals 1st-ever Pulsar Surface Map</a>
-            </figcaption></figure>
-            </th>
-        <!--vendosja e news nen popular articles-->
-        <td>
-        <th><h2>Popular Articles</h2>
-            <figure>    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-                <img id="drag1" src="Images/g16.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150"/>
-                <figcaption>
-                    <a href="https://www.space.com/first-black-hole-photo-science-breakthrough-2019.html" id="b">Historic 1st Photo of a Black Hole<br> Named Science Breakthrough of 2019</a>
-                </figcaption></figure>
-            </th>
-        </td>
-    </tr>
+        <script>
+$(document).ready(function(){
+  $("#slide").click(function(){
+    $("#slide1").slideDown("slow");
+  });
+});
+</script>
 
 
-<tr>
-    <th><article class="date">
-        <p>25 December 2019</p></article>
-        <figure><img src="Images/g14.jpg" width="300px" height="300px"/>
 
-     <a href="https://www.sciencenews.org/article/50-years-ago-scientists-didnt-know-origin-heavy-elements"><br>
-            50 years ago, scientists didn’t know where heavy elements came from</a> </figure>
-        </th>
 
-    <td>
-    <th>
-        <figure><img src="Images/g17.jpg" id="a1" />
-            <figcaption>
-                <a href="https://www.space.com/34-image-day.html" id="b1">Pictures from Space! Our Image of the Day</a>
-            </figcaption></figure>
-    </th>
-    </td>
+        <table id="1">
+            <thead>
+            <tr>
 
-</tr>
+                <th> <article class="date">
+                    <p>13 December 2019</p>
+                </article><figure><video controls style="width: 300px; height: 200px;" >
 
-<tr>
-    <th><article class="date">
-        <p>30 December 2019</p></article>
-        <figure><img src="Images/g13.jpg" width="300px" height="300px" />
+                    <source src="AudioVideo/video1.mp4" type="video/mp4">
+                </video>
 
-            <a href="https://www.sciencenews.org/article/a-new-mission-to-investigate-exoplanets-has-rocketed-into-space"><br>
-                A new mission to investigate<br> exoplanets has rocketed into space</a></figure>
-</th>
+                    <figcaption>
+                        <a href="https://www.youtube.com/watch?v=_T8cn2J13-4&feature=youtu.be">Watch: How are we going to the moon?</a>
+                    </figcaption></figure>
+                    <br>
 
-    <td>
-    <th>
-    <!-- perdorimi i canvas edhe getElementById-->
-        <figure>
-            <img id="g" src="Images/g18.jpg" width="150" height="150"/>
+            </tr>
 
-            <canvas id="myCanvas" width="150" height="150"  style="border: 1px solid #d3d3d3;"></canvas>
+            <tr>
+                <th> <article class="date">
+                    <p>16 December 2019</p>
+                </article><figure>
 
-            <p><button id="click" onclick="myCanvas()">Click</button></p>
-            <figcaption>
-                <a href="https://www.space.com/milky-way-ancient-starburst-discovery-image-video.html" id="b2">Scientists Spot Ancient Star Burst in Milky Way's Heart in Stunning New Image</a>
-            </figcaption>
-            <script>
+                    <video controls style="width: 300px; height: 250px;">
+                        <source src="AudioVideo/video2.mp4" type="video/mp4">
+                    </video>
+
+                    <figcaption>
+                        <a href="https://www.youtube.com/watch?time_continue=122&v=zukBXehGHas&feature=emb_title">Watch: NASA’s NICER Reveals 1st-ever Pulsar Surface Map</a>
+                    </figcaption></figure>
+                </th>
+                <!--vendosja e news nen popular articles-->
+                <td>
+                <th><h2>Popular Articles</h2>
+                    <figure> <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                        <img id="drag1" src="Images/g16.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150"/>
+                        <figcaption>
+                            <a href="https://www.space.com/first-black-hole-photo-science-breakthrough-2019.html" id="b"><br>Historic 1st Photo of a Black Hole<br> Named Science Breakthrough of 2019</a>
+                        </figcaption></figure>
+                </th>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th><article class="date">
+                    <p>25 December 2019</p></article>
+                    <figure><img src="Images/g14.jpg" width="300px" height="300px" />
+
+                        <a href="https://www.sciencenews.org/article/50-years-ago-scientists-didnt-know-origin-heavy-elements">
+                            50 years ago, scientists didn’t know where heavy elements came from</a> </figure>
+                </th>
+
+                <td>
+                <th>
+                    <figure><img src="Images/g17.jpg" id="a1" />
+                        <figcaption>
+                            <a href="https://www.space.com/34-image-day.html" id="b1">Pictures from Space! Our Image of the Day</a>
+                        </figcaption></figure>
+                </th>
+                </td>
+
+            </tr>
+
+            <tr>
+                <th><article class="date">
+                    <p>30 December 2019</p></article>
+                    <figure><img src="Images/g13.jpg" width="300px" height="300px" />
+
+                        <a href="https://www.sciencenews.org/article/a-new-mission-to-investigate-exoplanets-has-rocketed-into-space">
+                            <br>A new mission to investigate<br> exoplanets has rocketed into space</a></figure>
+                </th>
+
+                <td>
+                <th>
+                    <!-- perdorimi i canvas edhe getElementById-->
+                    <figure>
+                        <img id="g" src="Images/g18.jpg" width="150" height="150"/>
+
+                        <canvas id="myCanvas" width="150" height="150"  style="border: 1px solid #d3d3d3;"></canvas>
+
+                        <p><button id="click" onclick="myCanvas()">Click</button></p>
+                        <figcaption>
+                            <a href="https://www.space.com/milky-way-ancient-starburst-discovery-image-video.html" id="b2"><br>Scientists Spot Ancient Star Burst in Milky Way's Heart in Stunning New Image</a>
+                        </figcaption>
+                        <script>
 function myCanvas() {
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
@@ -438,37 +572,87 @@ function myCanvas() {
 }
 </script>
 
-            </figure>
-    </th>
-    </td>
-</tr>
-    </thead>
-</table>
+                    </figure>
+                </th>
+                </td>
+            </tr>
+            </thead>
+        </table>
+
+
+        <h2>GalaxySounds</h2>
+        <!-- audio-->
+
+         <button id="space">SpaceSounds</button> <br><br>
+        <p id="pp">
+            Space is a vacuum — so it generally doesn’t carry sound waves
+            like air does here on Earth (though some sounds do exist in
+            outer space, we just can’t hear them). But the various probes
+            zooming through our cosmos are capable of capturing radio
+            emissions from space objects. These radio emissions are then
+            converted into sound waves, and the result is the spooky sounds
+            NASA put together into a playlist.</p>
+
+            <figure>
+            <figcaption style="color: DarkViolet;">Its a universe full of secrets</figcaption>
+            <audio controls>
+                <source src="AudioVideo/audio2.mp3" type="audio/mpeg">
+            </audio></figure>
+        <br>
+        <figure><figcaption style="color: DarkViolet;">One million Earths could fit inside the sun</figcaption>
+
+            <audio controls>
+                <source src="AudioVideo/audio1.mp3" type="audio/mpeg">
+            </audio></figure>
 
 
 
-    <h2>GalaxySounds</h2>
-       <!-- audio-->
-    <br>
+<!--animacioni me jquery-->
+        <button id="butoni">Most Popular Galaxy Books To Read!</button><br>
+        <div class="librat">
 
-    <figure><figcaption style="color: DarkViolet;">Its a universe full of secrets</figcaption>
-    <audio controls>
-        <source src="AudioVideo/audio2.mp3" type="audio/mpeg">
-    </audio></figure>
-    <br>
-<figure><figcaption style="color: DarkViolet;">One million Earths could fit inside the sun</figcaption>
-    <audio controls>
-        <source src="AudioVideo/audio1.mp3" type="audio/mpeg">
-    </audio></figure>
+            <div id="libri1"><img src="Images/g38.jpg"  id="imazhi" style="width:90%; height:260px;" >
+
+                <p id="center">Welcome to the Universe is a personal guided tour of the cosmos by three of
+                    today's leading astrophysicists.This book covers it all―from planets, stars, and galaxies to black holes,
+                    wormholes, and time travel.</p></div><br>
+            <div id="libri2"><img src="Images/g39.jpg" id="imazhi" style="width:90%; height:260px;">
+                <p id="center">
+                    Containing star charts, a guide to the constellations, and details about seasons and the movement
+                    of the objects we see in the sky, this classic book makes H. A. Rey’s passion for astronomy evident on every page.
+            </p></div><br>
+            <div id="libri3"><img src="Images/g40.jpg" id="imazhi" style="width:90%; height:260px;" alt="This picture cannot be shown">
+                <p id="center">Vivid...impressive....Splendidly informative.”—The New York Times
+                    “Succeeds spectacularly.”—Science
+                    “A tour de force.”—Salon</p></div>
+        </div>
 
 
-    <!-- perdorimi i geolocation permes butonit-->
+        <script>
+    $(document).ready(function(){
+  $("#butoni").click(function(){
+    var div = $("#butoni");
+    div.animate({fontSize: '2em'}, "slow",function(){
+    });
+    });
+  });
+$(document).ready(function(){
+  $("#butoni").click(function(){
+    $("#libri1").fadeToggle();
+    $("#libri2").fadeToggle("slow");
+    $("#libri3").fadeToggle(2000);
+  });
+});
 
-<Br>
-    <button id="getLocation" onclick="getLocation()" style="float: right;">PozitaGjeografike</button>
-    <p id="demo"></p>
+        </script>
+        
+        <!-- perdorimi i geolocation permes butonit-->
 
-    <script>
+        <Br>
+        <button id="getLocation" onclick="getLocation()" style="float: right;">PozitaGjeografike</button>
+        <p id="demo"></p>
+
+        <script>
 var x = document.getElementById("demo");
 
 function getLocation() {
@@ -486,84 +670,63 @@ function showPosition(position) {
 </script>
 
 
-    <hr id="v2">
+        <hr id="v2">
 
-<section id="n">
-    <table border="0">
-        <thead>
-        <tr> <br>
-            <th>CONTACT DETAILS</th>
-            <th>QUICK LINKS</th>
-            <th>OUR MISSION</th>
-            <th>GRAB OUR NEWSLETTERS</th>
-        </tr> </thead>
+        <section id="n">
+            <table border="0">
+                <thead>
+                <tr> <br>
+                    <th>CONTACT DETAILS</th>
+                    <th>QUICK LINKS</th>
+                    <th>OUR MISSION</th>
+                    <th>GRAB OUR NEWSLETTERS</th>
+                </tr> </thead>
 
-        <tbody>
-        <tr>
-            <td><br>
-                <p>For more infomation <br>
-                    wether suggesions or<br>
-                    compaints,
-                    contact us at:<br>
+                <tbody>
+                <tr>
+                    <td><br>
+                        <p>For more infomation <br>
+                            wether suggesions or<br>
+                            compaints,
+                            contact us at:<br>
 
-                    <em>Phone:</em> <a href="tel:+14258828080" id="tel">+1 (425) 882-8080</a><br/>
-                    <em>Email:</em> <a href="mailto:Faqja2@gmail.com" id="email">Faqja2@gmail.com</a>
-                </p>
-            </td>
+                            <em>Phone:</em> <a href="tel:+14258828080" id="tel">+1 (425) 882-8080</a><br/>
+                            <em>Email:</em> <a href="mailto:Faqja2@gmail.com" id="email">Faqja2@gmail.com</a>
+                        </p>
+                    </td>
 
-            <td><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=c8ijbj5f8hv64go18vofbilpg7" id="a1">Project</a><hr align="left" width="70%">
-                <br> <a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=j8bvk2567atnc38nhsgtjuu4dc" id="a1">Faqja2</a><hr align="left" width="70%">
-                <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
-                <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
+                    <td><a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/PWWW19-20_Gr12.html?_ijt=c8ijbj5f8hv64go18vofbilpg7" id="a1">Project</a><hr align="left" width="70%">
+                        <br> <a href="http://localhost:63342/HelloWorld/.idea/PWWW19-20_Gr12/Faqja2.html?_ijt=j8bvk2567atnc38nhsgtjuu4dc" id="a1">Faqja2</a><hr align="left" width="70%">
+                        <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
+                        <br> <a href="#" id="a1">Link Text Here</a><hr align="left" width="70%">
 
-            </td>
+                    </td>
 
-            <td>Our mission is to provide<br>
-                life-long professional services<br>
-                to support all people
-                who<br> want to know more about <br>
-                our planet and space.
-                </br></td>
-            <td>
-                <label><input ype="text" name="name" placeholder="Name" /></label> <br>
-                <label><input type="text" name="Email" placeholder="Email"/> </label> <br>
-                <input id ="submit" type="SUBMIT" name="SUBMIT"/>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+                    <td>Our mission is to provide<br>
+                        life-long professional services<br>
+                        to support all people
+                        who<br> want to know more about <br>
+                        our planet and space.
+                        </br></td>
+                    <td>
+                        <form action="" >
+                            <p id="p2">
+                        <input ype="text" name="name" placeholder="Name" id="f"/> <br>
+                        <input type="text" name="Email" placeholder="Email" id="f"/>  <br>
+<br>
+                        <input id ="ss" type="SUBMIT" name="SUBMIT"  /></p>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
 
-<hr>
-<footer> Copyright &copy 2019 - All Rights Reserved  </footer>
-</section></section>
+            <hr>
+            <footer> Copyright &copy 2019 - All Rights Reserved  </footer>
+        </section></section>
 </section>
 
-<!-- perdorimi i kushtit 27 per bakcground me ndryshim te kohes-->
-<script>
-function updateBackground() {
-  var hr = (new Date()).getHours(),
-    body = document.body,
-    bstyle = body.style,
-    hello = document.querySelector(".brenda");
-  if (hr < 10) {
-    bstyle.backgroundColor = "yellow";
-    bstyle.color = "black";
-
-  } else if (hr < 20) {
-    bstyle.backgroundColor = "green";
-   /* bstyle.color = "white"; */
-
-  } else {
-    bstyle.backgroundColor = "black";
-    bstyle.color = "black";
-  }
-}
-
-setInterval(updateBackground, 1000 * 60);
-updateBackground();
-
-</script>
 
 </body>
 </html>
